@@ -43,7 +43,7 @@ try {
   // Get the phone number from the form
   // Send an SMS message
   $client->messages->create($phone, [
-    'from' => '+14065007014',
+    'from' => 'Add your Twilio free trial phone number',
     'body' => $phonemessage
   ]);
   echo "SMS sent successfully!";
