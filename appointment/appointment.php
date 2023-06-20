@@ -37,13 +37,13 @@ if (isset($_POST['submit'])) {
 try {
   // Create a Twilio client
   
-  $sid = "Add your sid";
-   $token = "add your token";
+  $sid = "AC0a14c5dbafe4da172a12d49c3c56937c";
+   $token = "042d2690a71a2c5acc7bbb4ab4e0570d";
   $client = new Twilio\Rest\Client($sid, $token);
   // Get the phone number from the form
   // Send an SMS message
   $client->messages->create($phone, [
-    'from' => 'Add your Twilio free trial phone number',
+    'from' => '+14065007014',
     'body' => $phonemessage
   ]);
   echo "SMS sent successfully!";
@@ -54,13 +54,13 @@ try {
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port = 587;
 
-  $mail->Username = 'add email you want to use to send mail'; // YOUR gmail email
-  $mail->Password = 'your password created wile application in google account'; // YOUR gmail password
+  $mail->Username = 'perfectbuild952@gmail.com'; // YOUR gmail email
+  $mail->Password = 'ybvdbzrrlcrkjhno'; // YOUR gmail password
 
   // Sender and recipient settings
-  $mail->setFrom('email you want to use ', 'no-reply');
+  $mail->setFrom('perfectbuild952@gmail.com', 'no-reply');
   $mail->addAddress($email); 
-  $mail->addReplyTo('email you want to use ', 'Perfect Build Services'); // to set the reply to
+  $mail->addReplyTo('perfectbuild952@gmail.com', 'Perfect Build Services'); // to set the reply to
   $signature = '
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -261,7 +261,7 @@ try {
                                 </div>
                                 <div class="col-md-6">
                                     <label class="control-label" for="phone">Phone</label>
-                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                    <input type="text" class="form-control" id="phone" name="phone" value="<?php echo '+91'; ?>" placeholder="Phone"
                                            required="true" maxlength="13">
                                 </div>
                                 <div class="col-md-6">
