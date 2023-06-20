@@ -37,13 +37,13 @@ if (isset($_POST['submit'])) {
 try {
   // Create a Twilio client
   
-  $sid = "AC0a14c5dbafe4da172a12d49c3c56937c";
-   $token = "042d2690a71a2c5acc7bbb4ab4e0570d";
+  $sid = "your twilio sid";
+   $token = "your twilio token";
   $client = new Twilio\Rest\Client($sid, $token);
   // Get the phone number from the form
   // Send an SMS message
   $client->messages->create($phone, [
-    'from' => '+14065007014',
+    'from' => 'your twilio phone number',
     'body' => $phonemessage
   ]);
   echo "SMS sent successfully!";
@@ -55,7 +55,7 @@ try {
   $mail->Port = 587;
 
   $mail->Username = 'perfectbuild952@gmail.com'; // YOUR gmail email
-  $mail->Password = 'ybvdbzrrlcrkjhno'; // YOUR gmail password
+  $mail->Password = 'your application password generated from google'; // YOUR gmail password
 
   // Sender and recipient settings
   $mail->setFrom('perfectbuild952@gmail.com', 'no-reply');
